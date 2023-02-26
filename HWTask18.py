@@ -12,14 +12,16 @@
 from random import randint
 k = int(input('Введите количество элементов в массиве:'))
 list = [randint(1, 10) for i in range(k)]
-print(list)
-list2 = []
 n = int(input('Введите число для поиска:'))
+list2 = []
 for i in range(k):
     list2.append(abs(n - list[i]))
-print(list2)
+#print(list2)
 min = list2[0]
 for i in range(len(list2)):
     if min > list2[i]:
         min = list2[i]
-print(f"Ближайшее число к {n} равно {min + n}")    
+        a = i
+#print(a)
+print(list)
+print(f"Ближайшее число к {n} равно {list[a]}")    
