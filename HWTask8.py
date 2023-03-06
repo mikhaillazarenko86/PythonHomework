@@ -5,10 +5,14 @@
 
 # 3 2 4 -> yes
 # 3 2 1 -> no
-n = int(input('Сторона n: '))
-m = int(input('Сторона m: '))
-k = int(input('Желаемое количество долек: '))
-if k >= n or k >= m and k % m == 0 or k % n == 0:
-    print('Yes')
-else:
-    print('No')
+def degree(a, b):
+    if b == 1:
+        return a
+    else:
+        return(a * degree(a, b-1))
+       
+       
+a = int(input('Введите число a: '))
+b = int(input('Введите число b: '))
+c = degree(a, b)
+print(c)
