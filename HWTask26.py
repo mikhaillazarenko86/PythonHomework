@@ -6,13 +6,14 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
 def degree(a, b):
-    prod = 1
     if b == 0:
-        return prod
+        return 1
     else:
-        prod = prod * a
-        b -= 1
-        print(b, prod)
-        return degree
-print(degree(int(input('Введите число a:')),int(input('Введите степень b:'))))
+        return(a * degree(a, b-1))
+       
+       
+a = int(input('Введите число a: '))
+b = int(input('Введите число b: '))
+c = degree(a, b)
+print(c)
     
