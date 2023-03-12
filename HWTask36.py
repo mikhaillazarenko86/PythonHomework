@@ -14,4 +14,12 @@
 # Sample Output:
 
 # ((house, дом), (car, машина), (men, человек), (tree, дерево))
- a = 
+text = 'house=дом car=машина men=человек tree=дерево'
+list = text.split()
+list_new = []
+for i in range(len(list)):
+    a = list[i].split('=')
+    list_new.append(a)
+
+result = tuple(map(tuple, list_new))
+print(result)
